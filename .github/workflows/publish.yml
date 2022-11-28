@@ -47,5 +47,16 @@ jobs:
         run: |
           npm run docker-ci
 
+      - name: ls -a via ssh
+        uses: garygrossgarten/github-action-ssh@release
+        with:
+          command: |
+            sed -i -r 's/juzi-marketing-bot:[0-9a-z]{7}/juzi-marketing-bot:${{ steps.vars.outputs.sha_short }}/g' /root/docker-compose.yml
+            $(aws ecr get-login --no-include-email --region cn-northwest-1)
+            docker-compose up -d
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          privateKey: ${{ secrets.PRIVATE_KEY}}
+
     outputs:
       version: ${{ github.sha }}
