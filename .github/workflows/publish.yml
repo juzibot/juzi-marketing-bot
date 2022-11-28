@@ -47,7 +47,7 @@ jobs:
         run: |
           npm run docker-ci
 
-      - name: ls -a via ssh
+      - name: Deploy the bot
         uses: garygrossgarten/github-action-ssh@release
         with:
           command: |
