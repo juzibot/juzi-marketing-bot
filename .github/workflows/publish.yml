@@ -34,12 +34,16 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Set short sha
+        id: vars
+        run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+
       - name: Build, tag, and push image to Amazon ECR
         id: build-image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: my-ecr-repo
-          IMAGE_TAG: ${{ github.sha }}
+          IMAGE_TAG: ${{ steps.vars.outputs.sha_short }}
         run: |
           npm run docker-ci
 
