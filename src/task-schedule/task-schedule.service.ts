@@ -3,6 +3,7 @@ import { ConfigService } from '@nestjs/config';
 import { SchedulerRegistry } from '@nestjs/schedule';
 import { CronJob } from 'cron';
 import moment from 'moment';
+import { MiniProgramConfig } from 'src/config/mini-program.config';
 import { RoomConfig } from 'src/config/room.config';
 import { TimeConfig } from 'src/config/time.config';
 import { MhGatewayService } from 'src/gateway/mh-gateway.service';
@@ -32,8 +33,10 @@ export class TaskScheduleService implements OnApplicationBootstrap {
     this.logger.log(`scheduleTasks()`);
     const timeConfig = this.configService.get<TimeConfig>('timeConfig');
     this.scheduleMorningReportJob(timeConfig.morningReport);
+    this.scheduleMorningGasJob(timeConfig.morningGasMessage);
     this.scheduleDailyNewsJob(timeConfig.newsMessage);
     this.scheduleDailyJokeJob(timeConfig.jokeMessage);
+    this.scheduleAfternoonGasJob(timeConfig.afternoonGasMessage);
   }
 
   scheduleMorningReportJob (time: string) {
@@ -50,7 +53,7 @@ export class TaskScheduleService implements OnApplicationBootstrap {
     const name = 'daily-news-cron-job';
     const job = new CronJob(this.getCronFromTime(time), async () => {
       await this.sendDailyNewsTask()
-    });
+    }, null, false, 'Asia/Shanghai');
     this.scheduleRegistry.addCronJob(name, job);
     job.start();
     this.logger.log(`Scheduled daily news job at ${time}`);
@@ -60,17 +63,51 @@ export class TaskScheduleService implements OnApplicationBootstrap {
     const name = 'daily-joke-cron-job';
     const job = new CronJob(this.getCronFromTime(time), async () => {
       await this.sendDailyJokeTask()
-    });
+    }, null, false, 'Asia/Shanghai');
     this.scheduleRegistry.addCronJob(name, job);
     job.start();
     this.logger.log(`Scheduled daily joke job at ${time}`);
+  }
+
+  scheduleMorningGasJob (time: string) {
+    const name = 'morning-gas-cron-job';
+    const job = new CronJob(this.getCronFromTime(time), async () => {
+      await this.sendGasMessageTask()
+    }, null, false, 'Asia/Shanghai');
+    this.scheduleRegistry.addCronJob(name, job);
+    job.start();
+    this.logger.log(`Scheduled morning gas job at ${time}`);
+  }
+
+  scheduleAfternoonGasJob (time: string) {
+    const name = 'afternoon-gas-cron-job';
+    const job = new CronJob(this.getCronFromTime(time), async () => {
+      await this.sendGasMessageTask()
+    }, null, false, 'Asia/Shanghai');
+    this.scheduleRegistry.addCronJob(name, job);
+    job.start();
+    this.logger.log(`Scheduled afternoon gas job at ${time}`);
+  }
+
+  async sendGasMessageTask () {
+    this.logger.log(`sending gas message...`);
+    const miniProgramConfig = this.configService.get<MiniProgramConfig[]>('miniProgramConfig');
+    const roomConfigList = this.configService.get<RoomConfig[]>('roomConfigList');
+    for (const roomConfig of roomConfigList) {
+      const message = await this.messageService.getGasMessage(roomConfig.stationId);
+      await this.mhGatewayService.sendTextMessage(roomConfig.chatId, message);
+      const miniProgram = miniProgramConfig.find(m => m.stationId === roomConfig.stationId);
+      if (miniProgram) {
+        await this.mhGatewayService.sendMiniProgramMessage(roomConfig.chatId, miniProgram.payload);
+      }
+    }
   }
 
   async sendMorningReportTask () {
     this.logger.log(`sending morning report...`);
     const roomConfigList = this.configService.get<RoomConfig[]>('roomConfigList');
     for (const roomConfig of roomConfigList) {
-      const message = await this.messageService.getMorningReport(roomConfig.city, roomConfig.stationId);
+      const message = await this.messageService.getMorningReport(roomConfig.city);
       await this.mhGatewayService.sendTextMessage(roomConfig.chatId, message);
     }
   }

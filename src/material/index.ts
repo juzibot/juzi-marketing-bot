@@ -5,8 +5,6 @@ export const getMorningMessage = (
   weatherMessage: string,
   // 尾号限行话术模块
   trafficMessage: string,
-  // 油价话术模块
-  gasStationMessage: string,
 ) => `\
 ${dateMessage}
 车友们早安，今天的生活来了~
@@ -14,9 +12,14 @@ ${dateMessage}
 ${weatherMessage}
 -----------------
 ${trafficMessage}
------------------
-${gasStationMessage}
 `;
+
+export const getGasInfoMessage = (
+  // 油价话术模块
+  gasStationMessage: string,
+) => `\
+${gasStationMessage}
+`
 
 export const getNewsMessage = (
   newsMessage: string,

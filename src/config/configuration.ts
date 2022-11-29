@@ -1,3 +1,4 @@
+import { miniProgramConfig } from './mini-program.config';
 import { roomConfigList } from './room.config';
 import { timeConfig } from './time.config';
 
@@ -25,5 +26,6 @@ export default () => {
 
     roomConfigList,
     timeConfig,
+    miniProgramConfig,
   }
 }

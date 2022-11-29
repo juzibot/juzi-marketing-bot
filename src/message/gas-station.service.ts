@@ -14,19 +14,30 @@ export class GasStationService {
     const stationName = gasStationInfo.data[0]['油站名称'];
     const gasPriceDataList = gasStationInfo.data.map(g => ({
       gasNumber: g['油号'],
-      price: g['优惠价'],
-    }))
+      discountPrice: g['优惠价'],
+      stationPrice: g['油站价'],
+      globalPrice: g['国标价'],
+    }));
+    const discountPriceList = gasPriceDataList.filter(g => g.discountPrice < g.stationPrice);
+
     return `\
-[${stationName}]今日油价
+[${stationName}]加油站今日油价
 -----------------
-${gasPriceDataList.map(d => `${this.getGasName(d.gasNumber)}：${d.price}`).join('\n')}`
+🇨🇳油站挂牌价 ：
+${gasPriceDataList.map(d => `${this.getGasName(d.gasNumber)}${d.stationPrice}元/升`).join('\n')}\
+${discountPriceList.length > 0 ? `
+🅰️小程序加油价：
+${discountPriceList.map(d => `${this.getGasName(d.gasNumber)}直降${d.stationPrice - d.discountPrice}元/升，${d.discountPrice}元/升`).join('\n')}
+` : ''}
+-----------------
+💕点击下方小程序一键导航油站，享限时优惠价`
   }
 
   private getGasName (gasNumber: string) {
     if (gasNumber === '0') {
-      return '0号柴油';
+      return '0#柴油';
     } else {
-      return `${gasNumber}号汽油`;
+      return `${gasNumber}#汽油`;
     }
   }
 }

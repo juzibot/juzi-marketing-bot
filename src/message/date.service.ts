@@ -14,7 +14,9 @@ export class DateService {
 
     return `\
 ☀️${today.format('YYYY年MM月DD日')} ${calendarData.weekday.replace('星期', '周')}
-万年历农历 ${calendarData.lunar}，今日宜${calendarData.suit}\
+万年历农历 ${calendarData.lunar}
+宜：${calendarData.suit}
+忌：${calendarData.avoid}\
 `
   }
 }

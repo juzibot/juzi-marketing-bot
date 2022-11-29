@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@nestjs/common';
 import NodeCache from 'node-cache';
-import { getJokeMessage, getMorningMessage, getNewsMessage } from 'src/material';
+import { getGasInfoMessage, getJokeMessage, getMorningMessage, getNewsMessage } from 'src/material';
 import { DateService } from './date.service';
 import { GasStationService } from './gas-station.service';
 import { JokeService } from './joke.service';
@@ -37,13 +37,17 @@ export class MessageService {
 
   private cache = new NodeCache();
 
-  async getMorningReport(city: string, stationId: string) {
+  async getMorningReport(city: string) {
     const dateMessage = await this.getDateMessage();
     const weatherMessage = await this.getWeatherMessage(city);
     const trafficMessage = await this.getTrafficMessage(city);
-    const gasStationMessage = await this.getGasStationMessage(stationId);
 
-    return getMorningMessage(dateMessage, weatherMessage, trafficMessage, gasStationMessage);
+    return getMorningMessage(dateMessage, weatherMessage, trafficMessage);
+  }
+
+  async getGasMessage(stationId: string) {
+    const gasStationMessage = await this.getGasStationMessage(stationId);
+    return getGasInfoMessage(gasStationMessage);
   }
 
   async getNews() {

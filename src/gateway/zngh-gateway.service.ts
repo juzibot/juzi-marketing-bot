@@ -11,7 +11,11 @@ export class ZnghGatewayService {
   async getGasStationInfo (stationId: string) {
     const znghEndpoint = this.configService.get<string>('znghEndpoint');
     const url = `${znghEndpoint}/juzi/v1/oil/station_info?stationId=${stationId}`
-    const result = await axios.get(url);
-    return result.data as GasInfoResult;
+    try {
+      const result = await axios.get(url);
+      return result.data as GasInfoResult;
+    } catch (e) {
+      console.error(e)
+    }
   }  
 }
