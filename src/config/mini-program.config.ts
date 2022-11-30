@@ -11,7 +11,7 @@ export const miniProgramConfig: MiniProgramConfig[] = [{
     appid: 'gh_037c70e93d4f',
     description: '欢迎到站加油',
     pagePath: 'pages/oilIndex/index.html?appKey=BsT2OGQbcFqh3PVy&stationId=673232022112551440',
-    thumbUrl: 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/09536133-1c10-4672-aba4-83faa84a53b9_潍坊佳泰石化.png',
+    thumbUrl: 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/194fbfc5-82df-415e-8a88-caec34ff9019_jiataishihua-2.png',
     title: '佳泰石化物流园站',
     username: 'wx0058c76b7f3b09ae',
     iconUrl: 'https://xiaoju-resource-bucket.s3.cn-northwest-1.amazonaws.com.cn/6381c50e6e00e21fab3fbc21_640%3Fwx_fmt%3Dpng%26wxfrom%3D200',
