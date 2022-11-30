@@ -37,6 +37,15 @@ export class TaskScheduleService implements OnApplicationBootstrap {
     this.scheduleDailyNewsJob(timeConfig.newsMessage);
     this.scheduleDailyJokeJob(timeConfig.jokeMessage);
     this.scheduleAfternoonGasJob(timeConfig.afternoonGasMessage);
+
+    // 本地推送加油信息消息
+    // await this.sendGasMessageTask();
+    // 本地推送早报消息
+    // await this.sendMorningReportTask();
+    // 本地推送新闻消息
+    // await this.sendDailyNewsTask();
+    // 本地推送笑话
+    // await this.sendDailyJokeTask();
   }
 
   scheduleMorningReportJob (time: string) {

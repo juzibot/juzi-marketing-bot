@@ -26,8 +26,9 @@ export class GasStationService {
 🇨🇳油站挂牌价 ：
 ${gasPriceDataList.map(d => `${this.getGasName(d.gasNumber)}${d.stationPrice}元/升`).join('\n')}\
 ${discountPriceList.length > 0 ? `
+
 🅰️小程序加油价：
-${discountPriceList.map(d => `${this.getGasName(d.gasNumber)}直降${d.stationPrice - d.discountPrice}元/升，${d.discountPrice}元/升`).join('\n')}
+${discountPriceList.map(d => `${this.getGasName(d.gasNumber)}直降${Number(d.stationPrice - d.discountPrice).toFixed(2)}元/升，${d.discountPrice}元/升`).join('\n')}\
 ` : ''}
 -----------------
 💕点击下方小程序一键导航油站，享限时优惠价`
@@ -35,9 +36,9 @@ ${discountPriceList.map(d => `${this.getGasName(d.gasNumber)}直降${d.stationPr
 
   private getGasName (gasNumber: string) {
     if (gasNumber === '0') {
-      return '0#柴油';
+      return '0# 柴油';
     } else {
-      return `${gasNumber}#汽油`;
+      return `${gasNumber}# 汽油`;
     }
   }
 }
