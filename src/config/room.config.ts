@@ -7,7 +7,7 @@ export interface RoomConfig {
 
 export const roomConfigList: RoomConfig[] = [{
   chatId: '6384d2da2f47ac820b762089',
-  roomTopic: 'API测试群',
+  roomTopic: 'API-测试群',
   city: '北京',
   stationId: '568572022072073090',
 },{
