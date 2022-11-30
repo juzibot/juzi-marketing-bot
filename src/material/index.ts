@@ -10,8 +10,13 @@ ${dateMessage}
 车友们早安，今天的生活来了~
 ----------------
 ${weatherMessage}
+${trafficMessage ?
+`\
 -----------------
 ${trafficMessage}
+`
+: ''
+}\
 `;
 
 export const getGasInfoMessage = (

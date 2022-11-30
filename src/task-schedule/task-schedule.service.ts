@@ -102,40 +102,66 @@ export class TaskScheduleService implements OnApplicationBootstrap {
     this.logger.log(`sending gas message...`);
     const miniProgramConfig = this.configService.get<MiniProgramConfig[]>('miniProgramConfig');
     const roomConfigList = this.configService.get<RoomConfig[]>('roomConfigList');
+    const timeConfig = this.configService.get<TimeConfig>('timeConfig');
+
     for (const roomConfig of roomConfigList) {
-      const message = await this.messageService.getGasMessage(roomConfig.stationId);
-      await this.mhGatewayService.sendTextMessage(roomConfig.chatId, message);
-      const miniProgram = miniProgramConfig.find(m => m.stationId === roomConfig.stationId);
-      if (miniProgram) {
-        await this.mhGatewayService.sendMiniProgramMessage(roomConfig.chatId, miniProgram.payload);
+      try {
+        const message = await this.messageService.getGasMessage(roomConfig.stationId);
+        await this.mhGatewayService.sendTextMessage(roomConfig.chatId, message);
+        const miniProgram = miniProgramConfig.find(m => m.stationId === roomConfig.stationId);
+        if (miniProgram) {
+          await this.sleep(timeConfig.messageInterval);
+          await this.mhGatewayService.sendMiniProgramMessage(roomConfig.chatId, miniProgram.payload);
+        }
+      } catch (e) {
+        this.logger.error(e?.stack || e?.message);
       }
+      await this.sleep(timeConfig.roomInterval);
     }
   }
 
   async sendMorningReportTask () {
     this.logger.log(`sending morning report...`);
     const roomConfigList = this.configService.get<RoomConfig[]>('roomConfigList');
+    const timeConfig = this.configService.get<TimeConfig>('timeConfig');
     for (const roomConfig of roomConfigList) {
-      const message = await this.messageService.getMorningReport(roomConfig.city);
-      await this.mhGatewayService.sendTextMessage(roomConfig.chatId, message);
+      try {
+        const message = await this.messageService.getMorningReport(roomConfig.city);
+        await this.mhGatewayService.sendTextMessage(roomConfig.chatId, message);
+      } catch (e) {
+        this.logger.error(e?.stack || e?.message);
+      }
+      await this.sleep(timeConfig.roomInterval);
     }
   }
 
   async sendDailyNewsTask () {
     this.logger.log(`sending daily news task...`);
     const roomConfigList = this.configService.get<RoomConfig[]>('roomConfigList');
+    const timeConfig = this.configService.get<TimeConfig>('timeConfig');
     const message = await this.messageService.getNews();
     for (const roomConfig of roomConfigList) {
-      await this.mhGatewayService.sendTextMessage(roomConfig.chatId, message);
+      try {
+        await this.mhGatewayService.sendTextMessage(roomConfig.chatId, message);
+      } catch (e) {
+        this.logger.error(e?.stack || e?.message);
+      }
+      await this.sleep(timeConfig.roomInterval);
     }
   }
 
   async sendDailyJokeTask () {
     this.logger.log(`sending daily joke task...`);
     const roomConfigList = this.configService.get<RoomConfig[]>('roomConfigList');
+    const timeConfig = this.configService.get<TimeConfig>('timeConfig');
     for (const roomConfig of roomConfigList) {
-      const message = await this.messageService.getJoke();
-      await this.mhGatewayService.sendTextMessage(roomConfig.chatId, message);
+      try {
+        const message = await this.messageService.getJoke();
+        await this.mhGatewayService.sendTextMessage(roomConfig.chatId, message);
+      } catch (e) {
+        this.logger.error(e?.stack || e?.message);
+      }
+      await this.sleep(timeConfig.roomInterval);
     }
   }
 
@@ -144,5 +170,9 @@ export class TaskScheduleService implements OnApplicationBootstrap {
     const hour = t.hour();
     const minute = t.minute();
     return `0 ${minute} ${hour} * * *`;
+  }
+
+  private async sleep (ms: number) {
+    await new Promise(resolve => setTimeout(resolve, ms));
   }
 }

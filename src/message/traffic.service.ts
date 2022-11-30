@@ -29,7 +29,10 @@ export class TrafficService {
     if (numbers === 'D') {
       return '今日限行尾号：单号';
     }
-    return `今日限行尾号：${numbers.split('').join(' 和 ')}`
+    if (!numbers) {
+      return '';
+    }
+    return `今日限行尾号：${numbers.split('').join(' 和 ')}`;
   }
 
   private getAreaCode (city: string) {
