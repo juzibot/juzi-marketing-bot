@@ -6,37 +6,37 @@ export interface RoomConfig {
 }
 
 export const roomConfigList: RoomConfig[] = [{
-  chatId: '63873a622f47ac820be61e01',
+  chatId: '6382fded2f47ac820b6e1954',
   roomTopic: '中固东三环加油站福利1群',
   city: '西安',
   stationId: '229902022061845164',
 },{
-  chatId: '6384d2da2f47ac820b762089',
+  chatId: '6386d60b2f47ac820b471e6f',
   roomTopic: '旺角石化加油福利1群',
   city: '玉林',
   stationId: '372432022111431048',
 },{
-  chatId: '63873aaf2f47ac820beb7171',
+  chatId: '6383023a2f47ac820bb7a4bb',
   roomTopic: '佳泰石化加油福利1群',
   city: '潍坊',
   stationId: '673232022112551440',
 },{
-  chatId: '63873a482f47ac820be44f90',
+  chatId: '6382fce42f47ac820b53e20a',
   roomTopic: '恒源瑞加油福利1群',
   city: '西安',
   stationId: '512782022061875470',
 },{
-  chatId: '63873a9e2f47ac820bea3e72',
+  chatId: '6382ff032f47ac820b83fb56',
   roomTopic: '能链石化松口岭加油福利1群',
   city: '梅州',
   stationId: '569542022092881400',
 },{
-  chatId: '63873a8d2f47ac820be91083',
+  chatId: '6383007a2f47ac820b9d5e15',
   roomTopic: '聚源加油站加油福利1群',
   city: '西安',
   stationId: '568572022072073090',
 },{
-  chatId: '63873a7b2f47ac820be7d873',
+  chatId: '638301592f47ac820baa6d2b',
   roomTopic: '滨州邹平开泰加油福利1群',
   city: '滨州',
   stationId: '076412022112558470',
