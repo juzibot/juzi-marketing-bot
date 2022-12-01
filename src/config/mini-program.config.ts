@@ -6,7 +6,7 @@ export interface MiniProgramConfig {
 }
 
 export const miniProgramConfig: MiniProgramConfig[] = [{
-  stationId: '568572022072073090',
+  stationId: '673232022112551440',
   payload: {
     appid: 'gh_037c70e93d4f',
     description: '欢迎到站加油',
