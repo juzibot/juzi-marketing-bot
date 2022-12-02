@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@nestjs/common';
-import moment from 'moment';
+import moment from 'moment-timezone';
 import { ApiSpaceGatewayService } from 'src/gateway/apispace-gateway.service';
 import areaCode from '../config/areaCode.json';
 
@@ -14,7 +14,7 @@ export class TrafficService {
       return `未获取到限行数据`;
     }
     const trafficInfo = await this.apiSpaceGatewayService.getTrafficInfo(areaCode);
-    const date = moment().format('YYYY-MM-DD');
+    const date = moment().tz('Asia/Shanghai').format('YYYY-MM-DD');
     const numbers = trafficInfo.result.traffic.limits.find(l => l.date === date)?.number || '';
 
     if (typeof numbers === 'undefined') {

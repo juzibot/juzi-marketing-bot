@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { JuheGatewayService } from 'src/gateway/juhe-gateway.service';
-import moment from 'moment';
+import moment from 'moment-timezone';
 
 @Injectable()
 export class DateService {
@@ -8,7 +8,7 @@ export class DateService {
   private readonly juheGatewayService: JuheGatewayService;
 
   async getDateMessage() {
-    const today = moment();
+    const today = moment().tz('Asia/Shanghai');
     const calendarInfo = await this.juheGatewayService.getCalendarInfo(today.format('YYYY-M-D'));
     const calendarData = calendarInfo.result.data;
 
