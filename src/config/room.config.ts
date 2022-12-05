@@ -40,5 +40,10 @@ export const roomConfigList: RoomConfig[] = [{
   roomTopic: '聚源加油福利1群',
   city: '西安',
   stationId: '568572022072073090',
+},{
+  chatId: '638db10c2f47ac820b4b530f',
+  roomTopic: '中国能源石化',
+  city: '玉林',
+  stationId: '597372022120371366',
 }
 ];
