@@ -81,4 +81,15 @@ export const miniProgramConfig: MiniProgramConfig[] = [{
     username: 'wx0058c76b7f3b09ae',
     iconUrl: 'https://xiaoju-resource-bucket.s3.cn-northwest-1.amazonaws.com.cn/6381c50e6e00e21fab3fbc21_640%3Fwx_fmt%3Dpng%26wxfrom%3D200',
   }
+},{
+  stationId: '597372022120371366',
+  payload: {
+    appid: 'gh_037c70e93d4f',
+    description: '欢迎到站加油',
+    pagePath: 'pages/oilIndex/index.html?appKey=TMC9JM16RRpqxlk3&stationId=868122022120596333',
+    thumbUrl: 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/1b6ab980-9737-41a3-8ad2-b336b9069bb9_03135033zIw.jpeg',
+    title: '中国能源石化加油站',
+    username: 'wx0058c76b7f3b09ae',
+    iconUrl: 'https://xiaoju-resource-bucket.s3.cn-northwest-1.amazonaws.com.cn/6381c50e6e00e21fab3fbc21_640%3Fwx_fmt%3Dpng%26wxfrom%3D200',
+  }
 }]
