@@ -43,7 +43,7 @@ export const miniProgramConfig: MiniProgramConfig[] = [{
     appid: 'gh_037c70e93d4f',
     description: '欢迎到站加油',
     pagePath: 'pages/oilIndex/index.html?appKey=Q6mMj0660D7H432o&stationId=076412022112558470',
-    thumbUrl: 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/1952eefb-6abe-4f6d-8397-2b5f608258db_滨州邹平凯特加油站.png',
+    thumbUrl: 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/f5cdb264-de31-46b6-a7b1-baf74fcfc712_zpktcover.jpg',
     title: '滨州邹平凯特加油站',
     username: 'wx0058c76b7f3b09ae',
     iconUrl: 'https://xiaoju-resource-bucket.s3.cn-northwest-1.amazonaws.com.cn/6381c50e6e00e21fab3fbc21_640%3Fwx_fmt%3Dpng%26wxfrom%3D200',
