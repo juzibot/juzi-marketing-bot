@@ -92,4 +92,15 @@ export const miniProgramConfig: MiniProgramConfig[] = [{
     username: 'wx0058c76b7f3b09ae',
     iconUrl: 'https://xiaoju-resource-bucket.s3.cn-northwest-1.amazonaws.com.cn/6381c50e6e00e21fab3fbc21_640%3Fwx_fmt%3Dpng%26wxfrom%3D200',
   }
+},{
+  stationId: '290972022120791849',
+  payload: {
+    appid: 'gh_037c70e93d4f',
+    description: '欢迎到站加油',
+    pagePath: 'pages/oilIndex/index.html?appKey=cfTy1f2U1YYvRM2l&stationId=290972022120791849',
+    thumbUrl: 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/8315e2a4-1c38-4e7a-b004-0a8d0bce80d0_qpby.jpg',
+    title: '壳牌北邮加油站',
+    username: 'wx0058c76b7f3b09ae',
+    iconUrl: 'https://xiaoju-resource-bucket.s3.cn-northwest-1.amazonaws.com.cn/6381c50e6e00e21fab3fbc21_640%3Fwx_fmt%3Dpng%26wxfrom%3D200',
+  }
 }]
