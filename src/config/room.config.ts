@@ -45,5 +45,10 @@ export const roomConfigList: RoomConfig[] = [{
   roomTopic: '中国能源石化',
   city: '玉林',
   stationId: '597372022120371366',
+},{
+  chatId: '6390548d2f47ac820b9e0642',
+  roomTopic: '壳牌北邮',
+  city: '北京',
+  stationId: '290972022120791849',
 }
 ];
