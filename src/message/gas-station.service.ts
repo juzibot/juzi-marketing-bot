@@ -21,7 +21,7 @@ export class GasStationService {
     const discountPriceList = gasPriceDataList.filter(g => g.discountPrice < g.stationPrice);
 
     return `\
-[${stationName}]加油站今日油价
+[${stationName}]今日油价
 -----------------
 🇨🇳油站挂牌价 ：
 ${gasPriceDataList.map(d => `${this.getGasName(d.gasNumber)}${d.stationPrice}元/升`).join('\n')}\
