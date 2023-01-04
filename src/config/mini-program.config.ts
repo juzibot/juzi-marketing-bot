@@ -114,4 +114,15 @@ export const miniProgramConfig: MiniProgramConfig[] = [{
     username: 'wx0058c76b7f3b09ae',
     iconUrl: 'https://xiaoju-resource-bucket.s3.cn-northwest-1.amazonaws.com.cn/6381c50e6e00e21fab3fbc21_640%3Fwx_fmt%3Dpng%26wxfrom%3D200',
   }
+},{
+  stationId: '299452023010342048',
+  payload: {
+    appid: 'gh_037c70e93d4f',
+    description: '欢迎到站加油',
+    pagePath: 'pages/oilIndex/index.html?appKey=02WuRY75AkOCG0H6&stationId=299452023010342048',
+    thumbUrl: 'https://image.aicwx.com/station/image/202301/03150700Lou.jpg',
+    title: '北京镇岗加油站',
+    username: 'wx0058c76b7f3b09ae',
+    iconUrl: 'https://xiaoju-resource-bucket.s3.cn-northwest-1.amazonaws.com.cn/6381c50e6e00e21fab3fbc21_640%3Fwx_fmt%3Dpng%26wxfrom%3D200',
+  }
 }]
