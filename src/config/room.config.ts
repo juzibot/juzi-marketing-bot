@@ -65,5 +65,30 @@ export const roomConfigList: RoomConfig[] = [{
   roomTopic: '中国石油光华路加油站',
   city: '北京',
   stationId: '377762023010585740',
+},{
+  chatId: '63bd178d2f47ac820bda0d63',
+  roomTopic: '旺泰宏达',
+  city: '北京',
+  stationId: '180752023010932074',
+},{
+  chatId: '63bd27972f47ac820bc84f4d',
+  roomTopic: '京东长江加油站',
+  city: '北京',
+  stationId: '494802023010595632',
+},{
+  chatId: '63bd27c82f47ac820bcaa2f7',
+  roomTopic: '中国石油李遂加油站',
+  city: '北京',
+  stationId: '289972023010540469',
+},{
+  chatId: '63bd19052f47ac820bedd67d',
+  roomTopic: '中国石油苗圃加油站',
+  city: '北京',
+  stationId: '565442023010318323',
+},{
+  chatId: '63bd26632f47ac820bb900ac',
+  roomTopic: '中国石油山根加油站',
+  city: '北京',
+  stationId: '767882023010510488',
 }
 ];
