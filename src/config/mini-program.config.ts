@@ -136,4 +136,59 @@ export const miniProgramConfig: MiniProgramConfig[] = [{
     username: 'wx0058c76b7f3b09ae',
     iconUrl: 'https://xiaoju-resource-bucket.s3.cn-northwest-1.amazonaws.com.cn/6381c50e6e00e21fab3fbc21_640%3Fwx_fmt%3Dpng%26wxfrom%3D200',
   }
+},{
+  stationId: '180752023010932074',
+  payload: {
+    appid: 'gh_037c70e93d4f',
+    description: '欢迎到站加油',
+    pagePath: 'pages/oilIndex/index.html?appKey=1GAbo8C46okqUkj4&stationId=180752023010932074',
+    thumbUrl: 'https://image.aicwx.com/station/image/202212/27105228EfI.jpg',
+    title: '旺泰宏达加油站',
+    username: 'wx0058c76b7f3b09ae',
+    iconUrl: 'https://xiaoju-resource-bucket.s3.cn-northwest-1.amazonaws.com.cn/6381c50e6e00e21fab3fbc21_640%3Fwx_fmt%3Dpng%26wxfrom%3D200',
+  }
+},{
+  stationId: '494802023010595632',
+  payload: {
+    appid: 'gh_037c70e93d4f',
+    description: '欢迎到站加油',
+    pagePath: 'pages/oilIndex/index.html?appKey=CQ2dD73fkkxpP85G&stationId=494802023010595632',
+    thumbUrl: 'https://image.aicwx.com/station/image/202301/05134310BjM.jpg',
+    title: '京东长江加油站',
+    username: 'wx0058c76b7f3b09ae',
+    iconUrl: 'https://xiaoju-resource-bucket.s3.cn-northwest-1.amazonaws.com.cn/6381c50e6e00e21fab3fbc21_640%3Fwx_fmt%3Dpng%26wxfrom%3D200',
+  }
+},{
+  stationId: '289972023010540469',
+  payload: {
+    appid: 'gh_037c70e93d4f',
+    description: '欢迎到站加油',
+    pagePath: 'pages/oilIndex/index.html?appKey=9k2t5K3Uu2kOaR4Y&stationId=289972023010540469',
+    thumbUrl: 'https://image.aicwx.com/station/image/202301/05155025CTs.jpg',
+    title: '中国石油李遂加油站',
+    username: 'wx0058c76b7f3b09ae',
+    iconUrl: 'https://xiaoju-resource-bucket.s3.cn-northwest-1.amazonaws.com.cn/6381c50e6e00e21fab3fbc21_640%3Fwx_fmt%3Dpng%26wxfrom%3D200',
+  }
+},{
+  stationId: '565442023010318323',
+  payload: {
+    appid: 'gh_037c70e93d4f',
+    description: '欢迎到站加油',
+    pagePath: 'pages/oilIndex/index.html?appKey=InaCjx7lxHY653hQ&stationId=565442023010318323',
+    thumbUrl: 'https://image.aicwx.com/station/image/202301/03170851qjr.jpg',
+    title: '中国石油苗圃加油站',
+    username: 'wx0058c76b7f3b09ae',
+    iconUrl: 'https://xiaoju-resource-bucket.s3.cn-northwest-1.amazonaws.com.cn/6381c50e6e00e21fab3fbc21_640%3Fwx_fmt%3Dpng%26wxfrom%3D200',
+  }
+},{
+  stationId: '767882023010510488',
+  payload: {
+    appid: 'gh_037c70e93d4f',
+    description: '欢迎到站加油',
+    pagePath: 'pages/oilIndex/index.html?appKey=Lo8k9wk8StT947kd&stationId=767882023010510488',
+    thumbUrl: 'https://image.aicwx.com/station/image/202301/05140647wiZ.png',
+    title: '中国石油山根加油站',
+    username: 'wx0058c76b7f3b09ae',
+    iconUrl: 'https://xiaoju-resource-bucket.s3.cn-northwest-1.amazonaws.com.cn/6381c50e6e00e21fab3fbc21_640%3Fwx_fmt%3Dpng%26wxfrom%3D200',
+  }
 }]
