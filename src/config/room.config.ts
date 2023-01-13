@@ -11,10 +11,10 @@ export const roomConfigList: RoomConfig[] = [{
   city: '西安',
   stationId: '229902022061845164',
 },{
-  chatId: '6386d60b2f47ac820b471e6f',
-  roomTopic: '旺角石化加油福利1群',
-  city: '玉林',
-  stationId: '372432022111431048',
+  chatId: '63c0c2b12f47ac820bbed3d7',
+  roomTopic: '中国燃料西南',
+  city: '茂名',
+  stationId: '151522023011210155',
 },{
   chatId: '6383023a2f47ac820bb7a4bb',
   roomTopic: '佳泰石化加油福利1群',
