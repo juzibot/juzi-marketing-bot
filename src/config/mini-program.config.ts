@@ -71,13 +71,13 @@ export const miniProgramConfig: MiniProgramConfig[] = [{
     iconUrl: 'https://xiaoju-resource-bucket.s3.cn-northwest-1.amazonaws.com.cn/6381c50e6e00e21fab3fbc21_640%3Fwx_fmt%3Dpng%26wxfrom%3D200',
   }
 },{
-  stationId: '372432022111431048',
+  stationId: '151522023011210155',
   payload: {
     appid: 'gh_037c70e93d4f',
     description: '欢迎到站加油',
-    pagePath: 'pages/oilIndex/index.html?appKey=CbiIG2LfknxhE4AU&stationId=372432022111431048',
-    thumbUrl: 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/79977ce8-9cac-4cde-bc0d-822894f124df_20221130-115411.png',
-    title: '旺角石化加油站',
+    pagePath: 'pages/oilIndex/index.html?appKey=6nG4dX08h53AlBSc&stationId=151522023011210155',
+    thumbUrl: 'https://image.aicwx.com/station/image/202210/26165049OcE.jpg',
+    title: '中国燃料西南加油站',
     username: 'wx0058c76b7f3b09ae',
     iconUrl: 'https://xiaoju-resource-bucket.s3.cn-northwest-1.amazonaws.com.cn/6381c50e6e00e21fab3fbc21_640%3Fwx_fmt%3Dpng%26wxfrom%3D200',
   }
