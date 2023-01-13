@@ -12,7 +12,7 @@ export const roomConfigList: RoomConfig[] = [{
   stationId: '229902022061845164',
 },{
   chatId: '63c0c2b12f47ac820bbed3d7',
-  roomTopic: '中国燃料西南',
+  roomTopic: '中国燃料',
   city: '茂名',
   stationId: '151522023011210155',
 },{
