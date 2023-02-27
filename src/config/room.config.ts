@@ -51,12 +51,12 @@ export const roomConfigList: RoomConfig[] = [{
   city: '北京',
   stationId: '290972022120791849',
 },
-// {
-//   chatId: '63a969e62f47ac820bea6cbc',
-//   roomTopic: '北京顺腾信',
-//   city: '北京',
-//   stationId: '211022022122623418',
-// },
+{
+  chatId: '63a969e62f47ac820bea6cbc',
+  roomTopic: '北京顺腾信',
+  city: '北京',
+  stationId: '211022022122623418',
+},
 {
   chatId: '63b522ac2f47ac820b98bdaa',
   roomTopic: '北京镇岗',
