@@ -109,7 +109,7 @@ export const miniProgramConfig: MiniProgramConfig[] = [{
     appid: 'gh_037c70e93d4f',
     description: '欢迎到站加油',
     pagePath: 'pages/oilIndex/index.html?appKey=3mto4rxUr1h5P0fX&stationId=211022022122623418',
-    thumbUrl: 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/34ce19d7-068f-4f2d-8475-713c4af9d80b_WechatIMG231.jpg',
+    thumbUrl: 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/2d805620-213f-4124-a9a2-8fb9ea95b8d9_20230302-184900.jpeg',
     title: '北京顺腾信加油站',
     username: 'wx0058c76b7f3b09ae',
     iconUrl: 'https://xiaoju-resource-bucket.s3.cn-northwest-1.amazonaws.com.cn/6381c50e6e00e21fab3fbc21_640%3Fwx_fmt%3Dpng%26wxfrom%3D200',
