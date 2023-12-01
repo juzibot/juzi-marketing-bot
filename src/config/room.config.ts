@@ -26,13 +26,13 @@ export const roomConfigList: RoomConfig[] = [{
   city: '西安',
   stationId: '512782022061875470',
 },{
-  chatId: '6382ff032f47ac820b83fb56',
-  roomTopic: '能链石化松口岭加油福利1群',
+  chatId: '65682a04b9d11925b3fe98e2',
+  roomTopic: '能链石化|加油福利1群',
   city: '梅州',
   stationId: '569542022092881400',
 },{
-  chatId: '638301592f47ac820baa6d2b',
-  roomTopic: '滨州邹平开泰加油福利1群',
+  chatId: '656829ceb9d11925b3f8898f',
+  roomTopic: '滨州邹平凯泰|加油福利1群',
   city: '滨州',
   stationId: '076412022112558470',
 },{
@@ -63,8 +63,8 @@ export const roomConfigList: RoomConfig[] = [{
   city: '北京',
   stationId: '299452023010342048',
 },{
-  chatId: '63b67cf52f47ac820bf6a746',
-  roomTopic: '中国石油光华路加油站',
+  chatId: '65682f4cb9d11925b3b354f3',
+  roomTopic: '中国石油光华路|加油福利3群',
   city: '北京',
   stationId: '377762023010585740',
 },{
@@ -88,8 +88,8 @@ export const roomConfigList: RoomConfig[] = [{
   city: '北京',
   stationId: '565442023010318323',
 },{
-  chatId: '63bd26632f47ac820bb900ac',
-  roomTopic: '中国石油山根加油站',
+  chatId: '65659c74b9d11925b3043855',
+  roomTopic: '中国石油山根|加油福利1群',
   city: '北京',
   stationId: '767882023010510488',
 },{
